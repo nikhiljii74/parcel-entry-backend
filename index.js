@@ -32,3 +32,6 @@ mongoose
   .catch((err) => {
     console.error("❌ MongoDB connection failed:", err);
   });
+app.get('/', (req, res) => {
+  res.send('🚚 Parcel Entry Backend is Live!');
+});
