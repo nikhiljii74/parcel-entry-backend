@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 const courierSchema = new mongoose.Schema({
   date: String,
+  from: String,       // ✅ Add this line
   to: String,
   company: String,
   courier: String,
