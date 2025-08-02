@@ -1,15 +1,15 @@
-// 📁 models/Courier.js
 const mongoose = require("mongoose");
 
 const courierSchema = new mongoose.Schema({
   date: String,
-  from: String,       // ✅ Add this line
+  from: String,       // ✅ From (sender/recipient)
   to: String,
   company: String,
   courier: String,
   awb: String,
+  invoiceNumber: String,  // ✅ New field added here
   content: String,
-  delivered: String,  // delivered date
+  delivered: String,  // Delivered date
   type: String        // Incoming / Outgoing
 });
 
