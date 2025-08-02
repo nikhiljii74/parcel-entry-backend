@@ -1,3 +1,17 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+require('dotenv').config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Your routes here
+const courierRoutes = require('./routes/courierRoutes');
+app.use('/api/couriers', courierRoutes);
+
+// MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -15,3 +29,4 @@ mongoose
 app.get('/', (req, res) => {
   res.send('🚚 Parcel Entry Backend is Live!');
 });
+ 
