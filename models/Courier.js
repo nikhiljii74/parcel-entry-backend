@@ -5,15 +5,18 @@ const courierSchema = new mongoose.Schema({
   from: String,
   to: String,
   company: String,
-  
-  location: String,   // ✅ Ye line add karni thi bas
-  
+  location: String, 
   courier: String,
   awb: String,
   invoiceNumber: String,
   content: String,
   delivered: String,
-  type: String
-}, { timestamps: true }); // (Optional: timestamps se createdAt automatic mil jata hai)
+  type: String,
+
+  // ✅ New Fields added for Update
+  price: String,   // Booking Amount (e.g. "150")
+  weight: String   // Parcel Weight (e.g. "500g")
+
+}, { timestamps: true });
 
 module.exports = mongoose.model("Courier", courierSchema);
