@@ -16,6 +16,7 @@ const courierSchema = new mongoose.Schema({
   // ✅ New Fields added for Update
   price: String,   // Booking Amount (e.g. "150")
   weight: String   // Parcel Weight (e.g. "500g")
+  
 
 }, { timestamps: true });
 
